@@ -9,7 +9,7 @@ from transformers.adapters import PfeifferConfig
 # This Version works with
 class AdapterBert(nn.Module):
 
-    def __init__(self, model_name, num_classes, embed_size, target_attribute='gender',
+    def __init__(self, model_name, num_classes, embed_size, fusion = False, num_adapters=1, target_attribute='gender',
                  max_doc_length=75, num_gate_layers=1,
                  reduction_factor=2):
         super(AdapterBert, self).__init__()
